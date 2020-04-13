@@ -75,7 +75,12 @@ RSpec.describe Tools::Luhn do
   end
 
   it 'is invalid with more than a single zero' do
-    luhn = Tools::Luhn.new('000 0')
+    luhn = Tools::Luhn.new('0000 0')
     expect(luhn.valid?).to be true
+  end
+
+  it ' is invalid for strings with non digits' do
+    luhn = Tools::Luhn.new(':9')
+    expect(luhn.valid?).to be false
   end
 end
