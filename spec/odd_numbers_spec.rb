@@ -12,12 +12,12 @@ RSpec.describe Tools::Odd_Numbers do
   end
 
   it 'returns the same array if the array has unique elements' do
-    number = Tools::Odd_Numbers.new([5, 6, 7, 1, 2, 3])
-    expect(number.all_odd_numbers).to eq [5, 6, 7, 1, 2, 3]
+    odd_numbers = Tools::Odd_Numbers.new([5, 6, 7, 1, 2, 3])
+    expect(odd_numbers.all_odd_numbers).to eq [5, 6, 7, 1, 2, 3]
   end
 
   it 'return all of the integers which appears an odd number of times' do
-    number = Tools::Odd_Numbers.new([1, 1, 2, -2, 5, 2, 4, 4, -1, -2, 5, 5])
-    expect(number.all_odd_numbers).to eq [5, -1]
+    odd_numbers = Tools::Odd_Numbers.new([1, 1, 2, -2, 5, 2, 4, 4, -1, -2, 5, 5])
+    expect(odd_numbers.all_odd_numbers).to eq [5, -1]
   end
 end
