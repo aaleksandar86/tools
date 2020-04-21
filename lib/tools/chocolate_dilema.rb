@@ -7,7 +7,7 @@ module Tools
     end
 
     def fairness?
-      chocolate_area(@first_input) == pieces_eaten(@second_input)
+      chocolate_area(@first_input) == chocolate_area(@second_input)
     end
 
     private
